@@ -5,11 +5,18 @@ import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { deleteContact } from 'myredux/operations';
 import { useSelector } from 'react-redux';
-import { selectFilter, selectContacts } from 'myredux/selectors';
+import {
+  selectFilter,
+  selectContacts,
+  selectIsLoading,
+  selectError,
+} from 'myredux/selectors';
+
 const ContactList = () => {
   const contacts = useSelector(selectContacts);
   const filter = useSelector(selectFilter);
-
+  const isLoading = useSelector(selectIsLoading);
+  const error = useSelector(selectError);
   const getVisibleContacts = () => {
     const normalizedFilter = filter.toLowerCase();
     return contacts.filter(contact =>
@@ -19,11 +26,17 @@ const ContactList = () => {
   const visibleContacts = getVisibleContacts();
 
   return (
-    <ul className={css.contactList}>
-      {visibleContacts.map(contact => (
-        <ContactListItem contact={contact} key={nanoid()} />
-      ))}
-    </ul>
+    <>
+      {isLoading ? (
+        <p>data is loading...</p>
+      ) : (
+        <ul className={css.contactList}>
+          {visibleContacts.map(contact => (
+            <ContactListItem contact={contact} key={nanoid()} />
+          ))}
+        </ul>
+      )}
+    </>
   );
 };
 const ContactListItem = ({ contact }) => {

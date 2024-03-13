@@ -24,6 +24,7 @@ const Layout = () => {
               color: isActive ? 'white' : 'black',
               background: isActive ? 'pink' : 'transparent',
             })}
+            to="register"
           >
             Register
           </NavLink>
@@ -39,7 +40,9 @@ const Layout = () => {
           </NavLink>
         </nav>
       </header>
-      <Outlet />
+      <Suspense>
+        <Outlet />
+      </Suspense>
     </div>
   );
 };

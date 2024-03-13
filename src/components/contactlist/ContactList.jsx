@@ -9,14 +9,12 @@ import {
   selectFilter,
   selectContacts,
   selectIsLoading,
-  selectError,
 } from 'myredux/selectors';
 
 const ContactList = () => {
   const contacts = useSelector(selectContacts);
   const filter = useSelector(selectFilter);
   const isLoading = useSelector(selectIsLoading);
-  const error = useSelector(selectError);
   const getVisibleContacts = () => {
     const normalizedFilter = filter.toLowerCase();
     return contacts.filter(contact =>

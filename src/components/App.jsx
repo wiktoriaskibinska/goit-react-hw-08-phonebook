@@ -10,18 +10,14 @@ axios.defaults.baseURL = `https://65ea1b39c9bf92ae3d3b1792.mockapi.io/`;
 const Home = lazy(() => import('pages/Home/Home.jsx'));
 const Login = lazy(() => import('pages/Login/Login'));
 const Register = lazy(() => import('pages/Register/Register'));
-
+const Contacts = lazy(() => import('pages/Contacts/Contacts'));
 export const App = () => {
   const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(fetchContacts());
-  }, [dispatch]);
 
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
-        <Route index element={<Home />} />
+        <Route index element={<Contacts />} />
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
       </Route>

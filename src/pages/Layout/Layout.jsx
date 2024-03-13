@@ -33,6 +33,7 @@ const Layout = () => {
               color: isActive ? 'white' : 'black',
               background: isActive ? 'pink' : 'transparent',
             })}
+            to="login"
           >
             Log In
           </NavLink>

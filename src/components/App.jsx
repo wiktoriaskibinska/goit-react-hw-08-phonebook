@@ -4,6 +4,7 @@ import React from 'react';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import Home from 'pages/Home/Home.jsx';
+import LoginForm from './loginform/LoginForm';
 import Layout from 'pages/Layout/Layout.jsx';
 import { fetchContacts } from 'myredux/operations';
 import axios from 'axios';
@@ -20,6 +21,7 @@ export const App = () => {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
+        <Route path="login" element={<LoginForm />} />
       </Route>
     </Routes>
   );

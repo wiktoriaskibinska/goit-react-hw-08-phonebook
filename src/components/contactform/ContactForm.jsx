@@ -18,11 +18,11 @@ const ContactForm = () => {
     const number = form.elements.number.value;
     const newContact = {
       name: name,
-      phone: number,
+      number: number,
       id: nanoid(),
     };
     const isInContactsList = contacts.some(
-      ({ phone }) => phone === newContact.phone
+      ({ number }) => number === newContact.number
     );
     if (isInContactsList) {
       alert(`${newContact.name} is already in the contact list`);

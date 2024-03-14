@@ -20,6 +20,16 @@ const Layout = () => {
           >
             Home
           </NavLink>
+          <NavLink
+            className={css.navLink}
+            style={({ isActive }) => ({
+              color: isActive ? 'white' : 'black',
+              background: isActive ? 'pink' : 'transparent',
+            })}
+            to="contacts"
+          >
+            Contacts
+          </NavLink>
           {!isLoggedIn && (
             <>
               <NavLink

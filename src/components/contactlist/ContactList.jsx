@@ -46,7 +46,7 @@ const ContactListItem = ({ contact }) => {
   return (
     <li>
       <p>
-        {contact.name}: {contact.phone}
+        {contact.name}: {contact.number}
       </p>
       <button type="button" onClick={onContactDelete}>
         Delete

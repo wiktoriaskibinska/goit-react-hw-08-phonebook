@@ -11,10 +11,14 @@ const Contacts = () => {
   useEffect(() => {
     dispatch(fetchContacts());
   }, [dispatch]);
-  <>
-    <ContactForm />
-    <Filter />
-    <ContactList />
-  </>;
+
+  return (
+    <>
+      <ContactForm />
+      <Filter />
+      <ContactList />
+    </>
+  );
 };
+
 export default Contacts;

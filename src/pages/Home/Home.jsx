@@ -4,7 +4,6 @@ import { useAuth } from 'hooks/useAuth';
 
 const Home = () => {
   const { isLoggedIn, user } = useAuth();
-  console.log(user);
 
   return (
     <div className={css.container}>

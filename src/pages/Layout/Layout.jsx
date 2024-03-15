@@ -3,13 +3,14 @@ import { Suspense } from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
 import css from './Layout.module.css';
 import { useAuth } from 'hooks/useAuth';
+import UserMenu from 'components/UserMenu/UserMenu';
 const Layout = () => {
   const { isLoggedIn } = useAuth();
   return (
     <div>
       <header className={css.header}>
         <div className={css.icon}></div>
-        <nav>
+        <nav className={css.navigation}>
           <NavLink
             className={css.navLink}
             style={({ isActive }) => ({
@@ -45,16 +46,19 @@ const Layout = () => {
               </NavLink>
             </>
           ) : (
-            <NavLink
-              className={css.navLink}
-              style={({ isActive }) => ({
-                color: isActive ? 'white' : 'black',
-                background: isActive ? 'pink' : 'transparent',
-              })}
-              to="contacts"
-            >
-              Contacts
-            </NavLink>
+            <>
+              <NavLink
+                className={css.navLink}
+                style={({ isActive }) => ({
+                  color: isActive ? 'white' : 'black',
+                  background: isActive ? 'pink' : 'transparent',
+                })}
+                to="contacts"
+              >
+                Contacts
+              </NavLink>
+              <UserMenu />
+            </>
           )}
         </nav>
       </header>

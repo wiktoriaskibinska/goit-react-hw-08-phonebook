@@ -1,0 +1,22 @@
+.logout {
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+.logout:hover {
+  cursor: pointer;
+}
+
+.username {
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  margin: 0;
+}
+.userNav {
+  display: flex;
+}

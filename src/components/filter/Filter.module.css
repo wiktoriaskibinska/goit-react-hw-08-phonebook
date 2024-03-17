@@ -12,6 +12,11 @@
   padding-top: 20px;
   padding-bottom: 20px;
   box-shadow: 0.25rem 0.25rem 0.75rem rgb(0 0 0 / 0.15);
+  background: rgba(255, 255, 255, 0.826);
+  background-image: url('/src/register.png');
+  background-blend-mode: color-dodge;
+  background-position-x: 0px;
+  background-position-y: -250px;
 }
 .filterInput {
   display: flex;

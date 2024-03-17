@@ -11,6 +11,11 @@
   box-shadow: 0.25rem 0.25rem 0.75rem rgb(0 0 0 / 0.15);
   padding-top: 20px;
   padding-bottom: 20px;
+  background: rgba(255, 255, 255, 0.826);
+  background-image: url('/src/register.png');
+  background-blend-mode: color-dodge;
+  background-position-x: 0px;
+  background-position-y: 0px;
 }
 .form input {
   display: block;
@@ -20,6 +25,7 @@
   font-size: 30px;
   border-radius: 10px;
   border: 3px solid pink;
+  margin-bottom: 20px;
 }
 .formBttn {
   border-radius: 10px;
@@ -31,7 +37,7 @@
   margin-top: 15px;
   color: pink;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 16px;
 }
 .formBttn:hover {
   background-color: rgba(239, 147, 162, 0.725);

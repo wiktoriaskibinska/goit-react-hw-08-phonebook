@@ -1,12 +1,16 @@
 .contactList {
   list-style-position: inside;
-  background: white;
+  background: rgba(255, 255, 255, 0.826);
+  background-image: url('/src/register.png');
+  background-blend-mode: color-dodge;
   box-shadow: 0.25rem 0.25rem 0.75rem rgb(0 0 0 / 0.15);
   padding: 0;
   margin: auto;
   margin-top: 40px;
   border-radius: 10px;
-  width: fit-content;
+  width: 700px;
+  background-position-x: 0px;
+  background-position-y: -350px;
 }
 
 li {
@@ -31,7 +35,7 @@ li button {
   margin-right: 10px;
   color: pink;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 16px;
 }
 li button:hover {
   background-color: rgba(239, 147, 162, 0.725);

@@ -24,10 +24,10 @@
   font-weight: 500;
 }
 .icon {
-  background-image: url('/src/favicon.png');
+  background-image: url('/public/favicon.png');
   background-size: contain;
   background-repeat: no-repeat;
-  width: 50px;
+  width: 100px;
   height: 50px;
   display: block;
 }

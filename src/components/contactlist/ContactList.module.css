@@ -24,7 +24,7 @@ li p {
 li button {
   border-radius: 10px;
   background-color: white;
-  border: 5px solid rgba(159, 37, 37, 0.267);
+  border: 3px solid rgba(159, 37, 37, 0.267);
   cursor: pointer;
   height: 50px;
   width: 150px;
